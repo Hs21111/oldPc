@@ -1,0 +1,99 @@
+"""Sevseg, by Al Sweigart al@inventwithpython.com		
+2	A seven-segment number display module, used by the Countdown and Digital		
+3	Clock programs.		
+4	More info at https://en.wikipedia.org/wiki/Seven-segment_display		
+5	This code is available at https://nostarch.com/big-book-small-python-programming		
+6	Tags: short, module"""		
+7		1	
+8	"""A labeled seven-segment display, with each segment labeled A to G:		
+9	 __A__		
+10	|     |    Each digit in a seven-segment display:		
+11	F     B     __       __   __        __   __  __   __   __		
+12	|__G__|    |  |   |  __|  __| |__| |__  |__    | |__| |__|		
+13	|     |    |__|   | |__   __|    |  __| |__|   | |__|  __|		
+14	E     C		
+15	|__D__|"""		
+16			
+17			
+18	def getSevSegStr(number, minWidth=0):		
+19	    """Return a seven-segment display string of number. The returned		
+20	    string will be padded with zeros if it is smaller than minWidth."""		
+21			
+22	    # Convert number to string in case it's an int or float:		
+23	    number = str(number).zfill(minWidth)		
+24			
+25	    rows = ['', '', '']		
+26	    for i, numeral in enumerate(number):		
+27	        if numeral == '.':  # Render the decimal point.		
+28	            rows[0] += ' '		
+29	            rows[1] += ' '		
+30	            rows[2] += '.'		
+31	            continue  # Skip the space in between digits.		
+32	        elif numeral == '-':  # Render the negative sign:		
+33	            rows[0] += '    '		
+34	            rows[1] += ' __ '		
+35	            rows[2] += '    '		
+36	        elif numeral == '0':  # Render the 0.		
+37	            rows[0] += ' __ '		
+38	            rows[1] += '|  |'		
+39	            rows[2] += '|__|'		
+40	        elif numeral == '1':  # Render the 1.		
+41	            rows[0] += '    '		
+42	            rows[1] += '   |'		
+43	            rows[2] += '   |'		
+44	        elif numeral == '2':  # Render the 2.		
+45	            rows[0] += ' __ '		
+46	            rows[1] += ' __|'		
+47	            rows[2] += '|__ '		
+48	        elif numeral == '3':  # Render the 3.		
+49	            rows[0] += ' __ '		
+50	            rows[1] += ' __|'		
+51	            rows[2] += ' __|'		
+52	        elif numeral == '4':  # Render the 4.		
+53	            rows[0] += '    '		
+54	            rows[1] += '|__|'		
+55	            rows[2] += '   |'		
+56	        elif numeral == '5':  # Render the 5.		
+57	            rows[0] += ' __ '		
+58	            rows[1] += '|__ '		
+59	            rows[2] += ' __|'		
+60	        elif numeral == '6':  # Render the 6.		
+61	            rows[0] += ' __ '		
+62	            rows[1] += '|__ '		
+63	            rows[2] += '|__|'		
+64	        elif numeral == '7':  # Render the 7.		
+65	            rows[0] += ' __ '		
+66	            rows[1] += '   |'		
+67	            rows[2] += '   |'		
+68	        elif numeral == '8':  # Render the 8.		
+69	            rows[0] += ' __ '		
+70	            rows[1] += '|__|'		
+71	            rows[2] += '|__|'		
+72	        elif numeral == '9':  # Render the 9.		
+73	            rows[0] += ' __ '		
+74	            rows[1] += '|__|'		
+75	            rows[2] += ' __|'		
+76			
+77	        # Add a space (for the space in between numerals) if this		
+78	        # isn't the last numeral and the decimal point isn't next:		
+79	        if i != len(number) - 1 and number[i + 1] != '.':		
+80	            rows[0] += ' '		
+81	            rows[1] += ' '		
+82	            rows[2] += ' '		
+83			
+84	    return '\n'.join(rows)		
+85			
+86			
+87	# If this program isn't being imported, display the numbers 00 to 99.		
+88	if __name__ == '__main__':		
+89	    print('This module is meant to be imported rather than run.')		
+90	    print('For example, this code:')		
+91	    print('    import sevseg')		
+92	    print('    myNumber = sevseg.getSevSegStr(42, 3)')		
+93	    print('    print(myNumber)')		
+94	    print()		
+95	    print('...will print 42, zero-padded to three digits:')		
+96	    print(' __        __ ')		
+97	    print('|  | |__|  __|')		
+98	    print('|__|    | |__ ')		
+99	

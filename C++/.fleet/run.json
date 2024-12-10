@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "G++",
+            "program": "$USER_HOME$\\Desktop\\mingw64\\bin\\g++.exe",
+            "args": [
+                "--static",
+                "$PROJECT_DIR$/$FILE_NAME_NO_EXT$.cpp",
+                "-std=c++23",
+                "-pthread",
+                "-O2",
+                "-o",
+                "$PROJECT_DIR$/$FILE_NAME_NO_EXT$.exe",
+                "-static-libstdc++",
+                "-static-libgcc"
+            ]
+
+        },
+        {
+            "type": "command",
+            "name": "Clang++",
+            "program": "$USER_HOME$\\Desktop\\mingw64\\bin\\clang++.exe",
+            "args": [
+                "$PROJECT_DIR$/main.cpp",
+                "-std=c++23",
+                "-pthread",
+                "-O2",
+                "-o",
+                "--static",
+                "$PROJECT_DIR$/$FILE_NAME_NO_EXT$.exe"
+            ]
+        }
+    ]
+}
