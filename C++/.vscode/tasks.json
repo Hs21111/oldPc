@@ -12,7 +12,8 @@
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"-static-libstdc++",
-				"-static-libgcc"
+				"-static-libgcc",
+				"-static"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
