@@ -6,12 +6,12 @@
             "program": "$USER_HOME$\\Desktop\\mingw64\\bin\\g++.exe",
             "args": [
                 "--static",
-                "$PROJECT_DIR$/$FILE_NAME_NO_EXT$.cpp",
+                "$FILE_DIR$/$FILE_NAME_NO_EXT$.$FILE_EXT$",
                 "-std=c++23",
                 "-pthread",
                 "-O2",
                 "-o",
-                "$PROJECT_DIR$/$FILE_NAME_NO_EXT$.exe",
+                "$FILE_DIR$/$FILE_NAME_NO_EXT$.exe",
                 "-static-libstdc++",
                 "-static-libgcc"
             ]
@@ -22,13 +22,13 @@
             "name": "Clang++",
             "program": "$USER_HOME$\\Desktop\\mingw64\\bin\\clang++.exe",
             "args": [
-                "$PROJECT_DIR$/main.cpp",
+                "$FILE_DIR$/$FILE_NAME_NO_EXT$.$FILE_EXT$",
                 "-std=c++23",
                 "-pthread",
                 "-O2",
                 "-o",
                 "--static",
-                "$PROJECT_DIR$/$FILE_NAME_NO_EXT$.exe"
+                "$FILE_DIR$/$FILE_NAME_NO_EXT$.exe"
             ]
         }
     ]

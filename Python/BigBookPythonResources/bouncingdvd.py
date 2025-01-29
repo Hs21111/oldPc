@@ -20,10 +20,11 @@ except ImportError:
 WIDTH, HEIGHT = bext.size()
 # We can't print to the last column on Windows without it adding a
 # newline automatically, so reduce the width by one:
-WIDTH -= 1
+WIDTH = 236
+HEIGHT = 67
 
-NUMBER_OF_LOGOS = 5  # (!) Try changing this to 1 or 100.
-PAUSE_AMOUNT = 0.2  # (!) Try changing this to 1.0 or 0.0.
+NUMBER_OF_LOGOS = 100  # (!) Try changing this to 1 or 100.
+PAUSE_AMOUNT = 0.01  # (!) Try changing this to 1.0 or 0.0.
 # (!) Try changing this list to fewer colors:
 COLORS = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
 
@@ -85,9 +86,9 @@ def main():
 
             # See if the logo bounces off the right edge:
             # (WIDTH - 3 because 'DVD' has 3 letters.)
-            elif logo[X] == WIDTH - 3 and logo[DIR] == UP_RIGHT:
+            elif logo[X] == WIDTH - 6 and logo[DIR] == UP_RIGHT:
                 logo[DIR] = UP_LEFT
-            elif logo[X] == WIDTH - 3 and logo[DIR] == DOWN_RIGHT:
+            elif logo[X] == WIDTH - 6 and logo[DIR] == DOWN_RIGHT:
                 logo[DIR] = DOWN_LEFT
 
             # See if the logo bounces off the top edge:
@@ -124,13 +125,13 @@ def main():
         # Display number of corner bounces:
         bext.goto(5, 0)
         bext.fg('white')
-        print('Corner bounces:', cornerBounces, end='')
+        print('Only for Windows 10 with old Command Prompt in fullscreen. Corner bounces:', cornerBounces, end='')
 
         for logo in logos:
             # Draw the logos at their new location:
             bext.goto(logo[X], logo[Y])
             bext.fg(logo[COLOR])
-            print('DVD', end='')
+            print('Hamdan', end='')
 
         bext.goto(0, 0)
 

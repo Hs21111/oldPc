@@ -1,0 +1,13 @@
+{
+    "plugins": [
+        {
+            "type": "add",
+            "pluginName": "fleet.language.cpp"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.intellij"
+        }
+    ],
+    "lsp.use.clangd.dynamic.index": true
+}

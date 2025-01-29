@@ -1,0 +1,2 @@
+C:/Users/Hamdan/Desktop/oldPc/C++/CMakeFiles/ALL_BUILD.dir
+C:/Users/Hamdan/Desktop/oldPc/C++/CMakeFiles/ZERO_CHECK.dir

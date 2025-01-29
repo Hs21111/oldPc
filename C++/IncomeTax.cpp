@@ -89,9 +89,7 @@ int main(){
          << "\nIncome Tax: Rs. " << IncomeTax
          << "\nYour Disposable Income: Rs. " << DisposableIncome
          << "\n\n\nTHANK YOU FOR USING H.S. INCOME TAX CALCULATOR\n"
-         << "Press 'Alt + F4' to quit." ;
+         << "Press Alt + F4 to quit." ;
 
-    while(true){
-
-    }
+    while(true){}
 }

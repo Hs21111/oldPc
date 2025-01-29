@@ -1,32 +1,38 @@
 #include <iostream>
+#include <vector>
+#include <cmath>
 
-int step_function(int x){
-    
-    int result = 0;
-    
-    if (x < 0) result = -1;
-    else if (x > 0) result = 1;
-    else result = 0;
-
-    return result;
+// Function to check if a number is prime
+bool is_prime(unsigned long long int n) {
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    for (unsigned long long int i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) return false;
+    }
+    return true;
 }
 
-int main(){
-    int num1;
-    std::cout << "Number 1: ";
-    std::cin >> num1;    
-    int result1 = step_function(num1);
-    std::cout << "Step: " << result1 << std::endl;
-    
-    int num2;
-    std::cout << std::endl << "Number 2: ";
-    std::cin >> num2; 
-    int result2 = step_function(num2);
-    std::cout << "Step: " << result2 << std::endl;
-    
-    int num3;
-    std::cout << std::endl << "Number 3: ";
-    std::cin >> num3; 
-    int result3 = step_function(num3);
-    std::cout << "Step: " << result3 << std::endl;
+// Function to generate prime numbers up to a specified limit
+std::vector<unsigned long long int> generate_primes(unsigned long long int limit) {
+    std::vector<unsigned long long int> primes;
+    for (unsigned long long int num = 2; num <= limit; ++num) {
+        if (is_prime(num)) {
+            primes.push_back(num);
+        }
+    }
+    return primes;
+}
+
+int main() {
+    unsigned long long int limit = 999999999;  // Adjust the limit as required
+    std::vector<unsigned long long int> prime_numbers = generate_primes(limit);
+
+    std::cout << "Prime numbers up to " << limit << ":\n";
+    for (unsigned long long int prime : prime_numbers) {
+        std::cout << prime << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
 }
