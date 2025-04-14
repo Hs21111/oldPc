@@ -22,13 +22,13 @@
             "name": "Clang++",
             "program": "$USER_HOME$\\Desktop\\mingw64\\bin\\clang++.exe",
             "args": [
-                "$FILE_DIR$/$FILE_NAME_NO_EXT$.$FILE_EXT$",
+                "$FILE_DIR$\$FILE_NAME_NO_EXT$.$FILE_EXT$",
                 "-std=c++23",
                 "-pthread",
                 "-O2",
                 "-o",
                 "--static",
-                "$FILE_DIR$/$FILE_NAME_NO_EXT$.exe"
+                "$FILE_DIR$\$FILE_NAME_NO_EXT$.exe"
             ]
         }
     ]
