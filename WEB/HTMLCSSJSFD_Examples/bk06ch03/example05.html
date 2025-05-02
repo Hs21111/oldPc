@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Triggering an animation with a pseudo-class</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                align-items: start;
+                background-color: hsl(210deg 60% 80%);
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .box {
+                align-items: center;
+                background: hsl(75deg 100% 90%);
+                color: hsl(0, 0%, 10%);
+                display: flex;
+                font-family: Verdana, sans-serif;
+                font-size: 1.25rem;
+                height: 12rem;
+                justify-content: center;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                width: 12rem;
+            }
+            .box:hover {
+                animation-name: rotate-it;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+            @keyframes rotate-it {
+                to {
+                    rotate: 1440deg;
+                    border-radius: 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">Hello World!</div>
+    </body>
+</html>

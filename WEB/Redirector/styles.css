@@ -1,0 +1,94 @@
+body {
+    user-select: none;
+}
+
+#searchbar {
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+}
+
+#searchbar {
+    width: 800px;
+    padding-left: 20px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+    font-size: 25px;
+    font-family: 'EB Garamond', serif;
+    height: 40px;
+    border-radius: 50px;
+}
+
+#searchbar:focus {
+    outline: none;
+}
+
+#searchbar::-webkit-search-cancel-button {
+    margin-left: 5px !important;
+}
+
+#Shortcuts {
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    font-size: 36px;
+    font-family: 'Borel', serif;
+}
+
+html {
+    background-image: url("Discovery+of+The+Lost+Vista+1+-+4K.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#Box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    max-height: 500px;
+    font-family: sans-serif;
+    background: transparent;
+}
+
+a {
+    display: inline-block;
+    border: white double 5px;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    line-height: 24px;
+    font-family: "Borel", sans-serif;
+    font-size: 20px;
+    width: 200px;
+    margin: 10px;
+}
+
+#Quote {
+    display: inline-block;
+    text-align: center;
+    height: 40vh;
+    vertical-align: center;
+    color: white;
+    width: calc(99% - 100px);
+    padding-top: calc(40vh - 200px);
+    font-size: 64px;
+    font-family: 'Tangerine', Serif;
+    max-height: 200px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    margin-top: 12px;
+    text-align: right;
+    font-size: 36px;
+    padding-right: 50px;
+}

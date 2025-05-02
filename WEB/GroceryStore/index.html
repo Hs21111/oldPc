@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Neon Grocery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div style="display: flex" >
+            <div id="Titlebar" ><a href="index.html" id="Maintext" >NEON GROCERY</a></div><div id="Menubar" ></div>
+        </div>
+        <div id="item-container">
+            <div class="items" >
+                <div class="image">
+                    <img src="images/Cabbage.png" alt="Cabbage" width="300px" height="200px" >
+                </div>
+                <div class="name">Cabbage</div>
+                <div class="price">₹30 per piece</div>
+                <div class="actionbox">
+                    <div class="selectorwrapper" >
+                        <button class="customspinboxbutton">-</button>
+                        <input type="number" class="selector" id="Cabbage" min="1" max="10" value="1">
+                        <button class="customspinboxbutton">+</button>
+                    </div>
+                    <button class="addtocartbutton" >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+Distribution,Focus Area,Minimum RAM,32-bit Support,Package System,Default Desktop Environment,Ideal Use Case
+Ubuntu,"User-friendly, general",2 GB,No,.deb,GNOME,Beginners and desktops
+Fedora,Cutting-edge software,2 GB,No,.rpm,GNOME,"Developers, enthusiasts"
+Debian,Stability,512 MB,Yes,.deb,GNOME or none (minimal install),"Servers, long-term support"
+Arch Linux,Customization,512 MB,No,Pacman,None (customizable),Advanced users
+Puppy Linux,Lightweight,256 MB,Yes,"Pet, .deb",JWM or Openbox,Older or low-resource hardware
+Linux Mint,User-friendly,1 GB,No,.deb,"Cinnamon, MATE, or XFCE","Beginners, Windows users"
+CentOS,Stability for servers,1 GB,No,.rpm,GNOME or KDE,Enterprise systems
+Zorin OS,Windows-like UI,2 GB,No,.deb,Zorin Desktop,"Windows replacement, beginners"
+Manjaro,User-friendly Arch,1 GB,No,Pacman,"XFCE, KDE, or GNOME",Beginners wanting Arch simplicity

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The :first-of-type Pseudo-Class</title>
+        <style>
+            body {
+                margin: 16px;
+                width: fit-content;
+            }
+            aside, p {
+                margin: 8px 0 0 8px;
+            }
+            p {
+                width: 500px;
+            }
+            aside:first-of-type {
+                border: 5px double black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section>
+            <p>Some paragraph text</p>
+            <aside>Some sidebar text</aside>
+            <p>More paragraph text</p>
+            <aside>Some sidebar text</aside>
+        </section>
+    </body>
+</html>

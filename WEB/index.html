@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function ChangeBGtoRed() {
+                document.body.style.background = 'red';
+            }
+            function ChangeBGtoWhite() {
+                document.body.style.background = 'white';}
+        </script>
+    </head>
+    <body>
+        <div style="text-align: center">
+            <button id="Red">Make background Red</button>
+            <button id="White">Make background White</button>
+            <script>
+                document.getElementById("Red").addEventListener("click", ChangeBGtoRed);
+                document.getElementById("White").addEventListener("click", ChangeBGtoWhite);
+            </script>
+            <script>
+                document.getElementById('Content').innerHTML = "Hello World!";
+            </script>
+            <div id="Content" ></div>
+        </div>
+    </body>
+</html>

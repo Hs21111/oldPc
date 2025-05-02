@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML inputs</title>
+    <style>
+        body {
+            font-size: 24px;
+            font-weight: 1000;
+            border-radius: 15px;
+            background: black;
+            color: white;
+        }
+        
+        div {
+            border: black solid 3px;
+            margin: 10px;
+            font-size: 24px;
+            align-content: center;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 50px;
+            font-family: Cantarell;
+            text-align: left;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background: black;
+        }
+        
+        label, input, textarea, select {
+            font-size: 24px;
+            font-weight: 1000;
+            font-family: Cantarell;
+            vertical-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: white;
+            background: black;
+        }
+        
+        input, textarea, select {
+            border: white solid 1px;
+            padding-left: 5px;
+            border-radius: 5px;
+        }
+        
+        input[type=submit]:active, input[type=reset]:active {
+            background: white;
+        }
+        
+        input[type=radio] {
+            scale: 2;
+        }
+        
+        input[type=date]::-webkit-calendar-picker-indicator,
+        input[type=time]::-webkit-calendar-picker-indicator,
+        input[type=datetime-local]::-webkit-calendar-picker-indicator,
+        input[type=month]::-webkit-calendar-picker-indicator,
+        input[type=week]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+        
+        input[type=file]::-webkit-file-upload-button {
+            font-size: 24px;
+            font-weight: 1000;
+            font-family: Cantarell;
+            vertical-align: center;
+            margin-left: 5px;
+            margin-right: 15px;
+            color: white;
+            background: black;
+            border: white solid 1px;
+            padding-left: 5px;
+            border-radius: 5px;
+        }
+        
+        input[type=file] {
+            border:  white solid 0px;
+        }
+    
+    </style>
+</head>
+<body>
+<div style="text-align: center;
+         font-size: 48px; font-family: Cantarell;
+         border-width: 0px;
+         background: black;
+         height: auto;
+         margin: 0px;
+         padding-top: 15px;">
+    Inputs in HTML
+    <div style="height: auto; padding: 0px; background-image: linear-gradient(to right, indigo, darkviolet, blue, green, yellow, orange, red);">
+        <div>
+            <label>Submit type: </label>
+            <input type="submit" value="Submit">
+        </div>
+        <div>
+            <label>Reset type: </label>
+            <input type="reset" value="Reset">
+        </div>
+        <div>
+            <label>Text: </label>
+            <input type="textType" name="textName" placeholder="textPrompt">
+        </div>
+        <div>
+            <label>Number: </label>
+            <input type="number" value="0"><br>
+        </div>
+        <div>
+            <label>Number Range: </label>
+            <input type="range" name="" min="0" max="100" value="50">
+        </div>
+        <div>
+            <label>Email: </label>
+            <input type="email" placeholder="you@yourdomain.com">
+        </div>
+        <div>
+            <label>URL: </label>
+            <input type="url" placeholder="http://yourdomain.com">
+        </div>
+        <div>
+            <label>Phone Number: </label>
+            <input type="tel" placeholder="(Country Code)xxxxxxxxxx">
+        </div>
+        <div>
+            <label>Time: </label>
+            <input type="time" placeholder="">
+        </div>
+        <div>
+            <label>Password: </label>
+            <input type="password">
+        </div>
+        <div>
+            <label>Search: </label>
+            <input type="search" placeholder="Search">
+        </div>
+        <div>
+            <label>Hidden: </label>
+            <input type="hidden" value="Hidden">
+        </div>
+        <div>
+            <label>Radio buttons: </label>
+            <input type="radio" id="option1" name="radioButtons">
+            <label for="option1">Option 1</label>
+            <input type="radio" id="option2" name="radioButtons">
+            <label for="option2">Option 2</label>
+        </div>
+        <div>
+            <label>Dropdown menu: </label>
+            <select>
+                <option>Option 1</option>
+                <option>Option 2</option>
+            </select>
+        </div>
+        <div style="height: auto">
+            <label>Option List: </label>
+            <select size="2">
+                <option>Option 1</option>
+                <option>Option 2</option>
+            </select>
+        </div>
+        <div>
+            <label>Color: </label>
+            <input type="color" value="#00ff00">
+        </div>
+        <div>
+            <label>Date: </label>
+            <input type="date" value="2011-11-02">
+        </div>
+        <div>
+            <label>Date and time: </label>
+            <input type="datetime-local" value="2011-11-02T12:00">
+        </div>
+        <div>
+            <label>Month: </label>
+            <input type="month" value="2011-11">
+        </div>
+        <div>
+            <label>Week: </label>
+            <input type="week" value="2011-W44">
+        </div>
+        <div style="width: auto">
+            <label>File: </label>
+            <input type="file">
+        </div>
+    </div>
+</div>
+</body>
+</html>

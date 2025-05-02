@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>kde_fedora_cheat_sheet</title>
+        <link rel="stylesheet" type="text/css" href="dark_table_style.css">
+    </head>
+    <body>
+        <table>
+            <tbody>
+            <tr>
+                <th>Task</th>
+                <th>Command</th>
+                <th>Description</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <th>Install KDE Plasma</th>
+                <td>sudo dnf groupinstall "KDE Plasma Workspaces"</td>
+                <td>Installs the KDE desktop environment on Fedora.</td>
+                <td>Recommended for first-time KDE users.</td>
+            </tr>
+            <tr>
+                <th>Set KDE as Default GUI</th>
+                <td>sudo systemctl set-default graphical.target</td>
+                <td>Ensures Fedora boots into KDE's graphical interface by default.</td>
+                <td>Use if switching from a non-GUI boot mode.</td>
+            </tr>
+            <tr>
+                <th>Enable SDDM</th>
+                <td>sudo systemctl enable sddm</td>
+                <td>Sets up the Simple Desktop Display Manager as the default login manager for KDE Plasma.</td>
+                <td>Alternative to GDM or other display managers.</td>
+            </tr>
+            <tr>
+                <th>Start SDDM</th>
+                <td>sudo systemctl start sddm</td>
+                <td>Activates the KDE login screen during startup.</td>
+                <td>Should be enabled after installation.</td>
+            </tr>
+            <tr>
+                <th>Remove GNOME Desktop</th>
+                <td>sudo dnf groupremove "GNOME Desktop"</td>
+                <td>Removes GNOME desktop environment from Fedora if no longer needed.</td>
+                <td>Optional step if you prefer KDE exclusively.</td>
+            </tr>
+            <tr>
+                <th>Update Fedora</th>
+                <td>sudo dnf update</td>
+                <td>Updates Fedora system packages, including KDE dependencies.</td>
+                <td>Run regularly to keep packages secure and up-to-date.</td>
+            </tr>
+            <tr>
+                <th>Install KDE Applications</th>
+                <td>sudo dnf install kde-applications</td>
+                <td>Installs additional KDE applications like Dolphin, Konsole, and Kate.</td>
+                <td>Enhances KDE functionality.</td>
+            </tr>
+            <tr>
+                <th>Open KDE System Settings</th>
+                <td>systemsettings5</td>
+                <td>Launches KDE's settings GUI for customizations such as themes, wallpapers, and layouts.</td>
+                <td>Great for tweaking your desktop environment.</td>
+            </tr>
+            <tr>
+                <th>Change KDE Themes</th>
+                <td>systemsettings5 -> Appearance -> Themes</td>
+                <td>Enables you to select and install desktop themes within KDE's settings GUI.</td>
+                <td>A visual customization must-have.</td>
+            </tr>
+            <tr>
+                <th>Install Flatpak</th>
+                <td>sudo dnf install flatpak</td>
+                <td>Adds Flatpak package support for installing universal applications.</td>
+                <td>Expand your software repository options.</td>
+            </tr>
+            <tr>
+                <th>Install Snap</th>
+                <td>sudo dnf install snapd</td>
+                <td>Adds Snap package support for installing universal applications.</td>
+                <td>Provides more app flexibility.</td>
+            </tr>
+            <tr>
+                <th>Add RPM Fusion Repository</th>
+                <td>sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm</td>
+                <td>Allows access to third-party packages not in default repositories.</td>
+                <td>Required for proprietary codecs or specialized software.</td>
+            </tr>
+            <tr>
+                <th>Upgrade KDE Plasma</th>
+                <td>sudo dnf distro-sync</td>
+                <td>Upgrades to the latest version of KDE Plasma.</td>
+                <td>Ensures you're running the latest features and fixes.</td>
+            </tr>
+            <tr>
+                <th>Install Media Codecs</th>
+                <td>sudo dnf install gstreamer1-libav gstreamer1-plugins-ugly</td>
+                <td>Installs media codecs for better compatibility with multimedia files.</td>
+                <td>Helpful for playing various video and audio formats.</td>
+            </tr>
+            <tr>
+                <th>Configure Firewall</th>
+                <td>sudo firewall-cmd --add-service=http --permanent</td>
+                <td>Configures Fedora's built-in firewall to enable HTTP service.</td>
+                <td>Necessary for server-related setups.</td>
+            </tr>
+            <tr>
+                <th>Optimize Boot Speed</th>
+                <td>sudo systemctl disable bluetooth.service</td>
+                <td>Disables unnecessary services like Bluetooth to improve boot speed.</td>
+                <td>Adjust based on your system's requirements.</td>
+            </tr>
+            <tr>
+                <th>Enable Wayland</th>
+                <td>sudo dnf install qt5-qtwayland qt6-qtwayland</td>
+                <td>Installs Wayland packages for better performance on modern hardware.</td>
+                <td>Recommended for newer GPUs and monitors.</td>
+            </tr>
+            <tr>
+                <th>Rollback Updates</th>
+                <td>sudo dnf history rollback</td>
+                <td>Reverts system updates to a previous state.</td>
+                <td>Use cautiously when updates cause issues.</td>
+            </tr>
+            <tr>
+                <th>Install NVIDIA Drivers</th>
+                <td>sudo dnf install akmod-nvidia</td>
+                <td>Installs NVIDIA proprietary drivers for enhanced graphics performance.</td>
+                <td>Ensure compatibility with your GPU.</td>
+            </tr>
+            <tr>
+                <th>Add Custom Repositories</th>
+                <td>sudo nano /etc/yum.repos.d/custom.repo</td>
+                <td>Creates a new repository configuration for custom package sources.</td>
+                <td>Add trusted third-party repositories only.</td>
+            </tr>
+            <tr>
+                <th>Configure KDE Startup</th>
+                <td>systemsettings5 -> Startup -> Desktop Session</td>
+                <td>Adjusts which applications and services start automatically with KDE Plasma.</td>
+                <td>Streamlines the startup process.</td>
+            </tr>
+            <tr>
+                <th>Enable Night Mode</th>
+                <td>systemsettings5 -> Display -> Night Color</td>
+                <td>Activates night mode to reduce eye strain during late hours.</td>
+                <td>Perfect for nighttime use.</td>
+            </tr>
+            </tbody>
+        
+        </table>
+    </body>
+</html>

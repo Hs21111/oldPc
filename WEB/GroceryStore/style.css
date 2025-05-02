@@ -1,0 +1,151 @@
+#Titlebar {
+    display: inline-block;
+    width: 50%;
+    background-color: black;
+    height: 10vh;
+    min-height: 24px;
+    padding-left: 30px;
+    font-size: 6vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-family: Monoton;
+    vertical-align: middle;
+    line-height: 10vh;
+    min-width: fit-content;
+    padding-right: 30px;
+    color: #00FF00 !important;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
+    overflow: hidden;
+}
+
+#Menubar {
+    display: inline-block;
+    width: 50%;
+    background-color: black;
+    height: 10vh;
+    min-height: 24px;
+    padding-left: 30px;
+    font-size: 6vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: Monoton;
+    vertical-align: middle;
+    line-height: 10vh;
+    min-width: fit-content;
+    padding-right: 30px;
+    color: #00FF00 !important;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
+}
+
+body {
+    padding: 10px;
+    background-color: #004600;
+}
+
+#Maintext {
+    text-decoration: none;
+    color: #00FF00;
+}
+
+#Maintext:hover {
+    color: #000000;
+}
+
+#item-container {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.items {
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #00FF00;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
+    margin: 40px;
+    background-color: #000000;
+    padding: 10px;
+}
+
+.image {
+    border-radius: 15px;
+    display: inline-block;
+    height: 50%;
+    width: 100%;
+    background-color: #00FF00;
+}
+
+.name {
+    padding-top: 5px;
+    height: 20%;
+    color: #00FF00;
+    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
+    font-size: 48px;
+    font-family: "Adwaita Sans";
+}
+
+.price {
+    height: 10%;
+    color: #00FF00;
+    font-family: "Adwaita Sans";
+    font-size: 36px;
+    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
+    margin-bottom: 25px;
+}
+
+.actionbox {
+    width: 100%;
+    justify-items: right;
+    letter-spacing: 10px;
+}
+
+.selector, .addtocartbutton {
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    background-color: #000000;
+    border-color: #00FF00;
+    border-radius: 7px;
+    color: #00FF00;
+    font-weight: 900;
+    font-family: "Adwaita Sans";
+    text-align: center;
+}
+
+.selector {
+    height:  30px;
+    width: 60%;
+}
+
+.addtocartbutton:hover {
+    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
+    color: black;
+}
+
+.selector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    border: none;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+.image > img {
+    border-radius: 15px;
+}
+
+.selectorwrapper {
+    display: inline-block;
+    width: 120px;
+    border: 2px solid #00FF00;
+    border-radius: 7px;
+}
