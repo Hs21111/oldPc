@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="Titlebar" >
+            <div id="title">Interest Calculator</div>
+        </div>
+        <div id="part" >
+            <div id="form" >
+                <form>
+                    Principal: <input class="number" type="number" id="principal" >
+                    <br><br>Rate: <div id="ratevalue" ></div><br> <input type="range"  id="rate" min="0" max="100" step="1">
+                    <br><br>Term:<br> <input class="number" type="number" id="term" size="3">
+                    <br><br><br><br><button type="submit" id="submit" onclick='make_chart()' >Submit</button>
+                </form>
+            </div>
+            <div id="myChart" ></div>
+        </div>
+        <script src="start.js"></script>
+        <script>
+            setInterval(function(){
+                document.getElementById('ratevalue').innerText = document.getElementById('rate').value + `%`;
+            }, 1)
+        </script>
+        <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

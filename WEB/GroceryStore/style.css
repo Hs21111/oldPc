@@ -54,7 +54,8 @@ body {
 }
 
 #item-container {
-    display: block;
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -85,17 +86,15 @@ body {
     padding-top: 5px;
     height: 20%;
     color: #00FF00;
-    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
     font-size: 48px;
-    font-family: "Adwaita Sans";
+    font-family: "Cal Sans";
 }
 
 .price {
     height: 10%;
     color: #00FF00;
-    font-family: "Adwaita Sans";
+    font-family: "Cal Sans";
     font-size: 36px;
-    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
     margin-bottom: 25px;
 }
 
@@ -108,24 +107,20 @@ body {
 .selector, .addtocartbutton {
     display: inline-block;
     width: 120px;
-    height: 36px;
+    height: 42px;
     background-color: #000000;
     border-color: #00FF00;
     border-radius: 7px;
     color: #00FF00;
     font-weight: 900;
-    font-family: "Adwaita Sans";
+    font-family: "Cal Sans";
     text-align: center;
 }
 
 .selector {
     height:  30px;
-    width: 60%;
-}
-
-.addtocartbutton:hover {
-    text-shadow: 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00, 0px 0px 30px #00FF00;
-    color: black;
+    width: 50%;
+    padding-top: 5px;
 }
 
 .selector {
@@ -144,8 +139,59 @@ body {
 }
 
 .selectorwrapper {
-    display: inline-block;
+    display: inline-flex;
     width: 120px;
+    max-width: 120px;
+    height: 35px;
     border: 2px solid #00FF00;
     border-radius: 7px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    padding-bottom: 5px;
+    vertical-align: center;
+}
+
+.actionbox {
+    display: block;
+    max-height: 40px;
+    letter-spacing: 20px;
+    text-align: center;
+}
+
+.addtocartbuttonwrapper {
+    display: inline;
+    margin: 50px;
+}
+
+.customspinboxbutton {
+    height: 41px;
+    width: 50px;
+    background: #000000;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    border-radius: 7px;
+    text-align: center;
+    font-family: "Cal Sans";
+    font-weight: bolder;
+
+}
+
+.addtocartbutton:active {
+    box-shadow: 0px 0px 10px #00FF00, 0px 0px 10px #00FF00, 0px 0px 10px #00FF00, 0px 0px 10px #00FF00;
+}
+
+.addtocartbutton {
+    letter-spacing: 1px;
+}
+
+.selector {
+    font-size: 18px;
+}
+
+html {
+    user-select: none;
+}
+
+#item-container {
+    display: block;
 }

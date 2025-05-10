@@ -1,0 +1,9 @@
+button {
+    background-color: transparent;
+    color: white;
+    font-family: Serif;
+}
+
+button:active {
+    scale: 0.9;
+}

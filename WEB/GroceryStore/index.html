@@ -4,27 +4,112 @@
         <meta charset="UTF-8">
         <title>Neon Grocery</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <div style="display: flex" >
-            <div id="Titlebar" ><a href="index.html" id="Maintext" >NEON GROCERY</a></div><div id="Menubar" ></div>
+            <div id="Titlebar" ><a href="index.html" id="Maintext" >NEON VEGGIES</a></div><div id="Menubar" ></div>
         </div>
         <div id="item-container">
-            <div class="items" >
-                <div class="image">
-                    <img src="images/Cabbage.png" alt="Cabbage" width="300px" height="200px" >
-                </div>
-                <div class="name">Cabbage</div>
-                <div class="price">₹30 per piece</div>
-                <div class="actionbox">
-                    <div class="selectorwrapper" >
-                        <button class="customspinboxbutton">-</button>
-                        <input type="number" class="selector" id="Cabbage" min="1" max="10" value="1">
-                        <button class="customspinboxbutton">+</button>
-                    </div>
-                    <button class="addtocartbutton" >Add to Cart</button>
-                </div>
-            </div>
+
         </div>
+        <script>
+            function additem(itemname, itemprice, itemquantity) {
+                const itemcontainer = document.getElementById('item-container');
+                const itemcard = document.createElement('div');
+
+                itemcard.setAttribute('class', 'items');
+
+                itemcontainer.appendChild(itemcard);
+
+                const img_container =  document.createElement('div');
+                img_container.setAttribute('class', 'image');
+                const img = document.createElement('img');
+                img.setAttribute('src', `images\\${itemname}.webp`);
+                img.setAttribute('height', '100%');
+                img.setAttribute('width', '100%');
+                img.setAttribute('alt', itemname);
+                img_container.appendChild(img);
+                itemcard.appendChild(img_container);
+
+                const name = document.createElement('div');
+                name.setAttribute('class', 'name');
+                name.innerHTML = itemname;
+                itemcard.appendChild(name);
+
+                const price = document.createElement('div');
+                price.setAttribute('class', 'price');
+                price.innerHTML = '₹'+itemprice+' per '+itemquantity;
+                itemcard.appendChild(price);
+
+                const actionbox = document.createElement('div');
+                actionbox.setAttribute('class', 'actionbox');
+
+                const selectorwrapper = document.createElement('div');
+                selectorwrapper.setAttribute('class', 'selectorwrapper');
+
+                const minusbutton = document.createElement('button');
+                minusbutton.setAttribute('class', 'customspinboxbutton');
+                minusbutton.setAttribute('onclick', `document.getElementById('${itemname}').value--`)
+                minusbutton.innerHTML = '-';
+
+                const selector = document.createElement('input');
+                selector.setAttribute('class', 'selector');
+                selector.setAttribute('id', itemname);
+                selector.setAttribute('name', itemname);
+                selector.setAttribute('value', 1);
+                selector.setAttribute('type', 'number');
+                selector.setAttribute('min', '1');
+                selector.setAttribute('max', '1');
+
+                const plusbutton = document.createElement('button');
+                plusbutton.setAttribute('class', 'customspinboxbutton');
+                plusbutton.setAttribute('onclick', `document.getElementById('${itemname}').value++`)
+                plusbutton.innerHTML = '+';
+
+                selectorwrapper.appendChild(minusbutton);
+                selectorwrapper.appendChild(selector);
+                selectorwrapper.appendChild(plusbutton);
+
+                const addtocartbuttonwrapper = document.createElement('div');
+                addtocartbuttonwrapper.setAttribute('class', 'addtocartbuttonwrapper');
+
+                const addtocartbutton = document.createElement('button');
+                addtocartbutton.setAttribute('class', 'addtocartbutton');
+                addtocartbutton.innerHTML = 'Add to Cart';
+
+                addtocartbuttonwrapper.appendChild(addtocartbutton);
+
+                actionbox.appendChild(selectorwrapper);
+                actionbox.appendChild(addtocartbuttonwrapper);
+
+                itemcard.appendChild(actionbox);
+            }
+
+            additem('Cabbage', 30,'piece');
+            additem('Onion', 30,'KG');
+            additem('Tomato', 10, 'KG');
+            additem('Potato', 30, 'KG');
+            additem('Carrot', 50, 'KG');
+            additem('Cauliflower', 20, 'piece');
+            additem('Green Beans', 100, 'KG');
+            additem('Green Peas', 50, 'KG');
+            additem('Spinach',  30, 'bundle');
+            additem('Brinjal', 50, 'KG');
+            additem('Capsicum', 50, 'KG');
+            additem('Cucumber', 30, 'KG');
+            additem('Okra', 50, 'KG');
+            additem('Karela', 60, 'KG');
+            additem('Ridge Gourd', 50, 'KG');
+            additem('Drumsticks', 50, 'KG');
+            additem('Beetroot', 40, 'KG')
+            additem('Radish', 30, 'KG');
+            additem('Pumpkin', 50, 'KG');
+            additem('Lauki',  30, 'KG');
+            additem('Snake Gourd',  50, 'KG');
+        </script>
     </body>
 </html>

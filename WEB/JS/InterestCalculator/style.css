@@ -1,0 +1,103 @@
+#Titlebar {
+    display: flex;
+    background-image: url("newbg.webp");
+    height: 200px;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: calc(100% - 800px);
+    height: calc(100% - 50px);
+    font-family: Serif;
+    font-size: 700%;
+    color: white;
+    border-radius: 20px;
+    border:  1px solid white;
+}
+
+body {
+    background: #2a2a2a;
+}
+
+#part {
+    display: flex;
+    height: 680px;
+    margin-top: 8px;
+    color: white;
+    letter-spacing: 8px;
+    padding-bottom: 10px;
+}
+
+#form {
+    padding: 30px;
+    display: inline;
+    width: 30%;
+    border: 5px solid white;
+    height: 680px;
+    border-radius: 20px;
+    letter-spacing: 0px;
+    margin: 10px;
+    font-size: 36px;
+}
+
+.number {
+    background-color: #FFFFFF;
+    filter: invert(1);
+    height: 36px;
+    font-size: 36px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+#chart {
+    padding: 30px;
+    display: block;
+    width: 70%;
+    border: 5px solid white;
+    height: 100%;
+    border-radius: 20px;
+    letter-spacing: 0px;
+    margin: 10px;
+}
+
+.number:focus {
+    outline: none;
+}
+
+button[type=submit] {
+    display: block;
+    width: 100%;
+    height: 64px;
+    font-size: 24px;
+}
+
+button:active {
+    scale: 0.9;
+    font-size: 36px;
+}
+
+input[type=range] {
+    width: 100%;
+    accent-color: #666666;
+}
+
+#ratevalue {
+    display: inline;
+}
+
+#myChart {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0px;
+}
