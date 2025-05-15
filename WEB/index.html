@@ -1,97 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-        #myChart {
-            background-color: #2a2a2a;
-            border-radius: 8px;
-            padding: 10px;
-        }
-    </style>
-</head>
-<body>
-<div id="myChart"></div>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .dialog {
+                animation: fadeOut 0.5s forwards;
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Defer plotting to ensure DOM is fully settled
-        setTimeout(function() {
-            // Ensure the chart div exists before plotting
-            const chartDiv = document.getElementById('myChart');
-            if (!chartDiv) {
-                console.error('Error: Chart div with id "myChart" not found. Ensure the div exists in the DOM before plotting.');
-                return;
+                &[open] {
+                    animation: fadeIn 1s forwards;
+
+                    &::backdrop {
+                        animation: backdropFadeIn 0.5s forwards;
+                    }
+                }
+
+                &::backdrop {
+                    animation: backdropFadeOut 0.5s forwards;
+                }
             }
 
-            // Data for two traces with value labels
-            const trace1 = {
-                x: [1, 2, 3, 4, 5],
-                y: [10, 15, 13, 17, 20],
-                type: 'scatter',
-                mode: 'lines+markers+text', // Include text for labels
-                name: 'Trace 1',
-                line: {
-                    color: '#1f77b4',
-                    shape: 'spline',
-                }, // Bright blue for visibility
-                marker: { size: 8 }, // Ensure markers are visible
-                text: [10, 15, 13, 17, 20], // Y-values to display
-                textposition: 'top center', // Position above markers
-                textfont: { color: '#ffffff', size: 12 } // White text for dark mode
-            };
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    translate: 0 -1em;
+                }
 
-            const trace2 = {
-                x: [1, 2, 3, 4, 5],
-                y: [16, 5, 11, 9, 13],
-                type: 'scatter',
-                mode: 'lines+markers+text', // Include text for labels
-                name: 'Trace 2',
-                line: { color: '#ff7f0e', shape: 'spline'}, // Bright orange for visibility
-                marker: { size: 8 }, // Ensure markers are visible
-                text: [16, 5, 11, 9, 13], // Y-values to display
-                textposition: 'top center', // Position above markers
-                textfont: { color: '#ffffff', size: 12 } // White text for dark mode
-            };
+                to {
+                    opacity: 1;
+                    translate: 0 0;
+                }
+            }
 
-            // Layout configuration for dark mode without crosshair or hover
-            const layout = {
-                title: {
-                    text: 'Chart with Two Traces',
-                    font: { color: '#ffffff' }
-                },
-                xaxis: {
-                    title: { text: 'X Axis', font: { color: '#ffffff' } },
-                    tickfont: { color: '#ffffff' },
-                    gridcolor: '#444444'
-                },
-                yaxis: {
-                    title: { text: 'Y Axis', font: { color: '#ffffff' } },
-                    tickfont: { color: '#ffffff' },
-                    gridcolor: '#444444'
-                },
-                showlegend: true,
-                legend: {
-                    font: { color: '#ffffff' },
-                    bgcolor: '#2a2a2a'
-                },
-                paper_bgcolor: '#2a2a2a',
-                plot_bgcolor: '#2a2a2a',
-                margin: { t: 50, b: 50, l: 50, r: 50 },
-                hovermode: false // Disable all hover interactions
-            };
+            @keyframes fadeOut {
+                from {
+                    opacity: 1;
+                    translate: 0 0;
+                }
 
-            // Plot the chart
-            Plotly.newPlot('myChart', [trace1, trace2], layout);
-        }, 0); // Zero delay to push to end of event queue
-    });
-</script>
-</body>
+                to {
+                    opacity: 0;
+                    translate: 0 1em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <dialog id="dialog">
+            <form>
+                Enter your name:
+                <input type="text" id="name">
+            </form>
+        </dialog>
+        <button id="button">OK</button>
+    </body>
+    <script>
+        let button = document.getElementById('button');
+        let dialog = document.getElementById('dialog');
+
+        button.addEventListener('click', function () {
+            dialog.showModal();
+        })
+    </script>
 </html>

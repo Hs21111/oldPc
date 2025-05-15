@@ -2,8 +2,111 @@ button {
     background-color: transparent;
     color: white;
     font-family: Serif;
+    transition: background-color 0.6s ease;
 }
 
 button:active {
     scale: 0.9;
+    background-color: #FFFFFF;
+    transition: 0.6s ease;
+    color: black;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}
+
+#main-content::-webkit-scrollbar {
+    display: block;
+}
+
+input[type='checkbox'] {
+    scale: 1.5;
+    accent-color: #0a091a;
+    border: 1px solid #ffffff;
+}
+
+button:hover {
+    box-shadow: 5px 5px 15px #FFFFFF, -5px -5px 15px #FFFFFF, -5px 5px 15px #FFFFFF, 5px -5px 15px #FFFFFF ;
+    transition: box-shadow 0.6s ease-out;
+}
+
+.dialog {
+    animation: fadeOut 0.5s forwards;
+
+    &[open] {
+        animation: fadeIn 1s forwards;
+
+        &::backdrop {
+            animation: backdropFadeOut 0.5s forwards;
+        }
+    }
+
+    &::backdrop {
+        animation: backdropFadeIn 0.5s forwards;
+    }
+
+    border-radius: 20px;
+    background-color: #0a091a;
+    color: white;
+    height: 40vh;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px #FFFFFF, 5px 5px 15px #FFFFFF, -5px -5px 15px #FFFFFF, -5px -5px 15px #FFFFFF;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        translate: 0 -10em;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        translate: 0 0;
+    }
+
+    to {
+        opacity: 0;
+        translate: 0 10em;
+    }
+}
+
+.control_add {
+    box-shadow: none;
+    text-align: center;
+    height: 24px;
+    width: max-content;
+    border-radius: 5px;
+    border: none;
+}
+
+.control_add:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 20px #FFFFFF, -5px -5px 20px #FFFFFF, 5px -5px 20px #FFFFFF, -5px 5px 20px #FFFFFF ;
+    background-color: #7c7c7c4a;
+}
+
+.control_add:active {
+    scale: 1;
+    transition: 100ms ease-in-out all;
+    background-color: #fff;
+}
+
+fieldset {
+    border-radius: 20px;
 }
